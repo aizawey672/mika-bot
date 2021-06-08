@@ -16,10 +16,10 @@ proc msgCommandCreate*(s: Shard, m: Message) {.async.} =
 
     # Handle command
     case getCommandHash(msg):
-    # `help` command
-    of help.CmdHash:
-        await help.execute(s, m)
+        # `help` command
+        of help.CmdHash:
+            await help.execute(s, m)
 
-    # command not found
-    else:
-        discard
+        # command not found
+        else:
+            discard
