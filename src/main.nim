@@ -1,12 +1,8 @@
-import global
-
-
-###============================================================================
-import std/[asyncdispatch, os], dimscord
+import global, std/[asyncdispatch, os], dimscord
 
 # Load Discord token from enviroment
 let auth = getEnv("DISCORD_AUTH")
-if auth == "": raise newException(KeyError, "`DISCORD_AUTH` env not found")
+if auth.len == 0: raise newException(KeyError, "`DISCORD_AUTH` env not found")
 
 # Create Discord client
 client = newDiscordClient(auth)
