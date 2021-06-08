@@ -10,3 +10,5 @@ namedBin["main"] = "mika-bot"
 
 # Dependencies
 requires "nim >= 1.4.8"
+requires "dimscord#HEAD"     # Wait for 1.3.0
+requires "jsony#HEAD"        # For strspeed implementation
